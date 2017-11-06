@@ -126,7 +126,7 @@ class Game
         is_valid = true
       else
         puts "Invalid Selection! Please enter 1-9:"
-        position = gets.strip
+        position = gets.chomp
       end
     end
   end
