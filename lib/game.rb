@@ -1,3 +1,5 @@
+require "pry"
+
 class Game
 
   #Attributes
@@ -25,6 +27,7 @@ class Game
   #Keeps track of the current player
   def current_player()
     current_turn = turn_count()
+    binding.pry
     if current_turn == 0 || current_turn % 2 == 0
       return "X"
     else
