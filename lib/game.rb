@@ -116,18 +116,17 @@ class Game
   #Initiates a turn by prompting for user input, and if valid, commiting the move
   def turn()
     player = current_player()
-    index = player.move(@board).input_to_index
+    position = player.move(@board)
 
     is_valid = false
     until is_valid
-      if valid_move?(index)
-        move(index, player)
-        display_board()
+      if @board.valid_move?(index)
+        @board.update(position, player)
+        @board.display
         is_valid = true
       else
         puts "Invalid Selection! Please enter 1-9:"
-        input = gets.strip
-        index = input_to_index(input)
+        position = gets.strip
       end
     end
   end
