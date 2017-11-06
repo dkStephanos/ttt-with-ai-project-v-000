@@ -1,4 +1,4 @@
-module Playable
+module Concerns::Playable
   module ClassMethods
   end
 
