@@ -29,9 +29,9 @@ class Game
     current_turn = turn_count()
     #binding.pry
     if current_turn == 0 || current_turn % 2 == 0
-      return player_1
+      return @player_1
     else
-      return player_2
+      return @player_2
     end
   end
 
