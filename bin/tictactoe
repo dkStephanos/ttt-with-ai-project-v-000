@@ -7,6 +7,7 @@ puts "Welcome! Thank you for Tic Tac Toe!!!"
 puts "How many people are playing? (0-2)"
 num_players = gets.chomp
 going_first = 1
+binding.pry
 if num_players == 1
   puts "Would you like to go first or second? (1/2)"
   going_first = gets.chomp
