@@ -78,12 +78,13 @@ class Board
   def turn_count
     @cells.count do |cell|
       if cell == " "
+      end
     end
   end
 
   #Refreshes the board with the input of the player
   def update
-    
+
   end
 
 end
