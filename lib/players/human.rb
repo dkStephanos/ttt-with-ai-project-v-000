@@ -1,3 +1,3 @@
-class Players::Human < Player
+class Human < Player
 
 end
