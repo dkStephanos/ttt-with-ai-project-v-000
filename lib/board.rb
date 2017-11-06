@@ -27,10 +27,7 @@ class Board
   end
 
   #Gets a position from the player for their move
-  def position
-    #player = current_player()
-    puts "Player, Please enter 1-9:"
-    input = gets.strip
+  def position(input)
     index = input_to_index(input)
     @cells[index]
   end
