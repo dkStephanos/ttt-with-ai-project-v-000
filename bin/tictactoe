@@ -5,7 +5,7 @@ require "pry"
 #Greets player and gathers game info
 puts "Welcome! Thank you for Tic Tac Toe!!!"
 puts "How many people are playing? (0-2)"
-num_players = gets.chomp
+num_players = gets.chomp.to_i
 going_first = 1
 binding.pry
 if num_players == 1
