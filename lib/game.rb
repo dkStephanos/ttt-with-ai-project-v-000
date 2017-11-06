@@ -128,7 +128,11 @@ class Game
         return "invalid"
       end
     end
-    position
+    if player == @player_1
+      return "1"
+    else
+      return "2"
+    end
   end
 
   #Plays the game
