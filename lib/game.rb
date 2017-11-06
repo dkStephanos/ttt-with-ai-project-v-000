@@ -127,7 +127,7 @@ class Game
       else
         puts "invalid"
         puts "Invalid Selection! Please enter 1-9:"
-        position = gets.chomp
+        position = player.move(@baord)
       end
     end
     position
