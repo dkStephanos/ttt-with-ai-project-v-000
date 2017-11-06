@@ -107,7 +107,7 @@ class Game
   def winner
     if won?
       winner = won?
-      return @board[winner[0]]
+      return @board.cells[winner[0]]
     else
       return nil
     end
@@ -115,10 +115,8 @@ class Game
 
   #Initiates a turn by prompting for user input, and if valid, commiting the move
   def turn()
-    player = @board.current_player()
-    puts "Player #{player}, Please enter 1-9:"
-    input = gets.strip
-    index = input_to_index(input)
+    player = current_player()
+    input = player.move(@board)
 
     is_valid = false
     until is_valid
