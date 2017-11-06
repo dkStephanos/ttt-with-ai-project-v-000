@@ -3,7 +3,6 @@ class Players::Human < Player
   def move(board)
     puts "Player, Please enter 1-9:"
     input = gets.chomp
-    #index = input.to_i - 1
   end
 
 end
