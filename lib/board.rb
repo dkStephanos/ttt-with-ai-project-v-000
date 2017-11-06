@@ -35,6 +35,7 @@ class Board
     puts "Player #{player}, Please enter 1-9:"
     input = gets.strip
     index = input_to_index(input)
+    @cells[index]
   end
 
   #Commits the move to the cells array
