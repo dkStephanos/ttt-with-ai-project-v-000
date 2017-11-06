@@ -19,8 +19,14 @@ class Board
     puts " #{@cells[6]} | #{@cells[7]} | #{@cells[8]} "
   end
 
+  #Determines whose turn it is
   def current_player
     turn_count % 2 == 0 ? "X" : "O"
+  end
+
+  #Resets the current game Board
+  def reset!
+    @cells.clear
   end
 
   #Gets a position from the player for their move
