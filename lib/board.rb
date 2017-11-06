@@ -77,7 +77,7 @@ class Board
 
   #Refreshes the board with the input of the player
   def update(position, player)
-    index = position.input_to_index
+    index = input_to_index(position)
     move(index, player.token)
   end
 
