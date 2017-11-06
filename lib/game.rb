@@ -32,6 +32,17 @@ class Game
     end
   end
 
+  #Keeps track of the current turn
+  def turn_count()
+  current_turn = 0
+  @board.each do |space|
+    if space != " "
+      current_turn += 1
+    end
+  end
+  return current_turn
+  end
+
   #Returns true if board is full
   def full?
     !@board.detect{|i| i == " "}
