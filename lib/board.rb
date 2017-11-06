@@ -71,7 +71,7 @@ class Board
   #Returns the amount of turns already played
   def turn_count
     @cells.count do |cell|
-      cell == " "
+      cell != " "
     end
   end
 
