@@ -35,8 +35,8 @@ class Game
   #Keeps track of the current turn
   def turn_count()
   current_turn = 0
-  @board.each do |space|
-    if space != " "
+  @board.each do |cell|
+    if cell != " "
       current_turn += 1
     end
   end
