@@ -120,7 +120,7 @@ class Game
 
     is_valid = false
     until is_valid
-      if @board.valid_move?(index)
+      if @board.valid_move?(position)
         @board.update(position, player)
         @board.display
         is_valid = true
