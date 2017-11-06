@@ -128,6 +128,7 @@ class Game
         return "invalid"
       end
     end
+    binding.pry
     if player == @player_1
       return "1"
     else
