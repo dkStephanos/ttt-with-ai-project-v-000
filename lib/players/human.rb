@@ -2,7 +2,7 @@ class Players::Human < Player
 
   def move(board)
     puts "Player, Please enter 1-9:"
-    input = gets.strip
+    input = gets.chomp
     index = board.input_to_index(input)
 
     is_valid = false
