@@ -45,7 +45,8 @@ class Board
   end
 
   #Returns true if a given cells position is taken
-  def taken?(index)
+  def taken?(input)
+    index = input - 1
     if @cells[index] == " " || @cells[index] == "" || @cells[index] == nil
       false
     elsif @cells[index] == "X" || @cells[index] == "O"
@@ -71,6 +72,13 @@ class Board
   #Returns true if cells is empty
   def empty?
     !@cells.detect{|i| i == "X" || i == "O"}
+  end
+
+  #Returns the amount of turns already played
+  def turn_count
+    @cells.count do |cell|
+      if cell == " "
+    end
   end
 
 end
