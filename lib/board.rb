@@ -40,15 +40,15 @@ class Board
   #Commits the move to the cells array
   def move(index, character)
     @cells[index] = character
-    return @cells
+    @cells
   end
 
   #Returns true if a given cells position is taken
   def taken?(index)
     if @cells[index] == " " || @cells[index] == "" || @cells[index] == nil
-      return false
+      false
     elsif @cells[index] == "X" || @cells[index] == "O"
-      return true
+      true
     end
   end
 
@@ -60,7 +60,6 @@ class Board
   #Converts users input to index in board array
   def input_to_index(user_input)
     index = user_input.to_i - 1
-    return index
   end
 
   #Returns true if cells is full
