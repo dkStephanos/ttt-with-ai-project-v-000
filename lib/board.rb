@@ -50,7 +50,7 @@ class Board
 
   #Returns true if there the requested move is valid
   def valid_move?(index)
-    index.between?(1,9) && !taken?(index)
+    index.to_i.between?(1,9) && !taken?(index)
   end
 
   #Converts users input to index in board array
