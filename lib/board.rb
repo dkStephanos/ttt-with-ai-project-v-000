@@ -21,11 +21,6 @@ class Board
     puts " #{@cells[6]} | #{@cells[7]} | #{@cells[8]} "
   end
 
-  #Determines whose turn it is
-  def current_player
-    turn_count % 2 == 0 ? "X" : "O"
-  end
-
   #Resets the current game Board
   def reset!
     @cells = Array.new(9, " ")
@@ -33,8 +28,8 @@ class Board
 
   #Gets a position from the player for their move
   def position
-    player = current_player()
-    puts "Player #{player}, Please enter 1-9:"
+    #player = current_player()
+    puts "Player, Please enter 1-9:"
     input = gets.strip
     index = input_to_index(input)
     @cells[index]
@@ -58,7 +53,7 @@ class Board
 
   #Returns true if there the requested move is valid
   def valid_move?(index)
-    index.between?(0,8) && !taken?(index)
+    index.between?(1,9) && !taken?(index)
   end
 
   #Converts users input to index in board array
