@@ -15,7 +15,7 @@ class Game
   ]
 
   #Initializer
-  def initialize(player_1 = "X", player_2 = "O", board = Array.new(9, " "))
+  def initialize(player_1 = Human.new("X"), player_2 = Human.new("O"), board = Array.new(9, " "))
     @player_1 = player_1
     @player_2 = player_2
     @board = board
