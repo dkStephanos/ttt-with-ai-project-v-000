@@ -49,8 +49,7 @@ class Board
   #Returns true if a given cells position is taken
   def taken?(input)
     index = input - 1
-    binding.pry
-    if @cells[index] == " " || @cells[index] == "" || @cells[index] == nil
+    if @cells[index] == " " || @cells[index] == "" #|| @cells[index] == nil
       false
     elsif @cells[index] == "X" || @cells[index] == "O"
       true
