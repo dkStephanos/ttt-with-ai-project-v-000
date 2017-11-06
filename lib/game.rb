@@ -21,5 +21,108 @@ class Game
     @board = board
   end
 
+  #Methods
+  #Returns true if board is full
+  def full?
+    !@board.detect{|i| i == " "}
+  end
+
+  #Returns true if board is empty
+  def empty?
+    !@board.detect{|i| i == "X" || i == "O"}
+  end
+
+  #Returns true if the game is over
+  def over?
+    if won?
+      return true
+    elsif draw?
+      return true
+    else
+      return false
+    end
+  end
+
+  #Determines if current game has been won based upon the WIN_COMBINATIONS
+  def won?
+    if empty?
+      return false
+    end
+
+    WIN_COMBINATIONS.each do |win_combination|
+      win_index_1 = win_combination[0]
+      win_index_2 = win_combination[1]
+      win_index_3 = win_combination[2]
+
+      position_1 = @board[win_index_1] # load the value of the board at win_index_1
+      position_2 = @board[win_index_2] # load the value of the board at win_index_2
+      position_3 = @board[win_index_3] # load the value of the board at win_index_3
+
+      if position_1 == "X" && position_2 == "X" && position_3 == "X"
+        return win_combination # return the win_combination indexes that won.
+      elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+        return win_combination # return the win_combination indexes that won.
+      else
+        false
+      end
+    end
+  end
+
+  #Determines if game has ended in a draw
+  def draw?
+    if full?
+      if !won?
+        return true
+      else
+        return false
+      end
+    end
+  end
+
+  #Returns the winner of the game
+  def winner
+    if won?
+      winner = won?
+      return @board[winner[0]]
+    else
+      return nil
+    end
+  end
+
+  #Initiates a turn by prompting for user input, and if valid, commiting the move
+  def turn()
+    player = @board.current_player()
+    puts "Player #{player}, Please enter 1-9:"
+    input = gets.strip
+    index = input_to_index(input)
+
+    is_valid = false
+    until is_valid
+      if valid_move?(index)
+        move(index, player)
+        display_board()
+        is_valid = true
+      else
+        puts "Invalid Selection! Please enter 1-9:"
+        input = gets.strip
+        index = input_to_index(input)
+      end
+    end
+  end
+
+  #Plays the game
+  def play()
+    while !over?()
+      turn()
+    end
+    if won?()
+      winning_player = winner()
+      puts "Congratulations #{winning_player}!"
+    elsif draw?()
+      puts "Cat's Game!"
+    end
+  end
+
+
 
 end
