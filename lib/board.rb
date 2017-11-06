@@ -40,7 +40,7 @@ class Board
 
   #Returns true if a given cells position is taken
   def taken?(input)
-    index = input - 1
+    index = input.to_i - 1
     if @cells[index] == " " || @cells[index] == "" #|| @cells[index] == nil
       false
     elsif @cells[index] == "X" || @cells[index] == "O"
