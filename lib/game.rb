@@ -128,6 +128,7 @@ class Game
         return "invalid"
       end
     end
+    binding.pry
     position
   end
 
