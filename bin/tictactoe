@@ -10,7 +10,7 @@ going_first = 1
 #binding.pry
 if num_players == 1
   puts "Would you like to go first or second? (1/2)"
-  going_first = gets.chomp
+  going_first = gets.chomp.to_i
 end
 
 #Creates game instance based on user input
