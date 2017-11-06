@@ -125,8 +125,6 @@ class Game
         @board.display
         is_valid = true
       else
-        puts "invalid"
-        puts "Invalid Selection! Please enter 1-9:"
         position = player.move(@baord)
       end
     end
