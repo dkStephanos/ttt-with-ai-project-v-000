@@ -7,7 +7,7 @@ class Players::Human < Player
 
     is_valid = false
     until is_valid
-      if board.valid?(index)
+      if board.valid_move?(index)
         is_valid = true
       else
         puts "Invalid Selection! Please enter 1-9:"
