@@ -125,9 +125,7 @@ class Game
         @board.display
         is_valid = true
       else
-        binding.pry
-        puts "Invalid Selection! Please enter 1-9:"
-        position = gets.chomp
+        return "invalid"
       end
     end
   end
