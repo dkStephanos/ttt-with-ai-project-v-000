@@ -10,6 +10,6 @@ class Players::Computer < Player
         break
       end
     end
-    current_move
+    current_move.to_s
   end
 end
