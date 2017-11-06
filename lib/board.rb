@@ -6,7 +6,7 @@ class Board
   #Initializer
   def initialize
     @cells = Array.new(9)
-    @turn_count = 0
+    @turn_count = 1
   end
 
   #Methods
