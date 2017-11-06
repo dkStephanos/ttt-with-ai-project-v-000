@@ -116,7 +116,7 @@ class Game
   #Initiates a turn by prompting for user input, and if valid, commiting the move
   def turn()
     player = current_player()
-    input = player.move(@board)
+    index = player.move(@board).input_to_index
 
     is_valid = false
     until is_valid
@@ -145,6 +145,10 @@ class Game
     end
   end
 
+  #Converts users input to index in board array
+  def input_to_index(user_input)
+    index = user_input.to_i - 1
+  end
 
 
 end
