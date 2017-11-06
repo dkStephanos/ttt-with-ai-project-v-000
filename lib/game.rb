@@ -22,6 +22,16 @@ class Game
   end
 
   #Methods
+  #Keeps track of the current player
+  def current_player()
+    current_turn = turn_count()
+    if current_turn == 0 || current_turn % 2 == 0
+      return "X"
+    else
+      return "O"
+    end
+  end
+
   #Returns true if board is full
   def full?
     !@board.detect{|i| i == " "}
