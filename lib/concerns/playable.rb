@@ -1,4 +1,4 @@
-module Playable
+module Players
   module ClassMethods
   end
 
