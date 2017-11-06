@@ -5,7 +5,7 @@ class Board
 
   #Initializer
   def initialize
-    @cells = Array.new(9)
+    @cells = Array.new(9, "")
     @turn_count = 1
   end
 
