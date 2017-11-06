@@ -48,12 +48,12 @@ class Game
 
   #Returns true if board is full
   def full?
-    !@board.detect{|i| i == " "}
+    !@board.cells.detect{|i| i == " "}
   end
 
   #Returns true if board is empty
   def empty?
-    !@board.detect{|i| i == "X" || i == "O"}
+    !@board.cells.detect{|i| i == "X" || i == "O"}
   end
 
   #Returns true if the game is over
