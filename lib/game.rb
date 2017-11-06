@@ -128,6 +128,7 @@ class Game
         return "invalid"
       end
     end
+    player
   end
 
   #Plays the game
