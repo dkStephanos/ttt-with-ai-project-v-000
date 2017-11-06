@@ -1,7 +1,7 @@
 class Player
 
   #Attributes
-  attr_accessor :token
+  attr_reader :token
 
   #Initializer
   def initialize(token)
