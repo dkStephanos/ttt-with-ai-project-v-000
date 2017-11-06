@@ -5,7 +5,7 @@ class Board
 
   #Initializer
   def initialize
-    @cells = Array.new(9, "")
+    @cells = Array.new(9, " ")
     @turn_count = 1
   end
 
@@ -26,7 +26,7 @@ class Board
 
   #Resets the current game Board
   def reset!
-    @cells.clear
+    @cells = Array.new(9, " ")
   end
 
   #Gets a position from the player for their move
