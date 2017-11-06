@@ -1,4 +1,4 @@
-class Human < Player
+class Players::Human < Player
 
   def move(board)
     puts "Player, Please enter 1-9:"
