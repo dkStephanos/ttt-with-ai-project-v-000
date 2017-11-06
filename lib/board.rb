@@ -81,4 +81,9 @@ class Board
     end
   end
 
+  #Refreshes the board with the input of the player
+  def update
+    
+  end
+
 end
