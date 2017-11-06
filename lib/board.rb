@@ -1,3 +1,5 @@
+require "pry"
+
 class Board
 
   #Attributes
@@ -47,6 +49,7 @@ class Board
   #Returns true if a given cells position is taken
   def taken?(input)
     index = input - 1
+    binding.pry
     if @cells[index] == " " || @cells[index] == "" || @cells[index] == nil
       false
     elsif @cells[index] == "X" || @cells[index] == "O"
@@ -56,7 +59,7 @@ class Board
 
   #Returns true if there the requested move is valid
   def valid_move?(index)
-    index.between?(0,8) && !position_taken?(index)
+    index.between?(0,8) && !taken?(index)
   end
 
   #Converts users input to index in board array
